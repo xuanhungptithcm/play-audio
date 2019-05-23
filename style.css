@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.time-select,
+.sound-picker,
+.player-container {
+  height: 80%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.player-container {
+  position: relative;
+}
+.player-container svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.play {
+  cursor: pointer;
+}
+.time-display {
+  position: absolute;
+  bottom: 10%;
+  font-size: 50px;
+  color: #fff;
+}
+/* .time-select {
+  background: lightblue;
+}
+.sound-picker {
+  background: lightgreen;
+}
+.player-container {
+  background: lightcoral;
+} */
+
+video {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  /* width: 100%; */
+  z-index: -10;
+}
+.time-select button,
+.sound-picker button {
+  background: none;
+  border: 2px solid #fff;
+  padding: 20px 40px;
+  cursor: pointer;
+  color: #fff;
+  padding: 30px 50px;
+  font-size: 20px;
+  outline: none;
+}
+.time-select button:hover {
+  color: black;
+  background: white;
+}
+.sound-picker button {
+  border: none;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  padding: 30px;
+}
+.sound-picker button:nth-child(1) {
+  background: #4972a1;
+}
+.sound-picker button:nth-child(2) {
+  background: #a14f49;
+}
+.sound-picker button img {
+  height: 100%;
+}
+
+.time-select,
+.player-container,
+.sound-picker {
+  opacity: 0.7;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.time-select:hover,
+.player-container:hover,
+.sound-picker:hover {
+  opacity: 1;
+  /* transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0); */
+}
+.active {
+  color: black !important;
+  background: #fff !important;
+}
+.hidePlayingLeft {
+  transform: translate(-80%, 0);
+  -webkit-transform: translate(-80%, 0);
+  -moz-transform: translate(-80%, 0);
+  -ms-transform: translate(-80%, 0);
+  -o-transform: translate(-80%, 0);
+}
+.hidePlayingRight {
+  transform: translate(80%, 0);
+  -webkit-transform: translate(80%, 0);
+  -moz-transform: translate(80%, 0);
+  -ms-transform: translate(80%, 0);
+  -o-transform: translate(80%, 0);
+}
+.hidePlayContainer {
+}
